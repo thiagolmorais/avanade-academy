@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		// tests
+		sumAll([1,4]); //return 10
+		sumAll([4,1]); //return 10
+		sumAll([5,10]); //return 45
+		sumAll([10,5]); //return 45
+
+		function sumAll(arg) {
+			var sum = 0
+			if (arg[0] <= arg[1]) {
+				var max = arg[1]
+				var min = arg[0]
+			}else{
+				var max = arg[0]
+				var min = arg[1]
+			}
+			while(min <= max){
+				sum += min;
+				min++;
+			}
+			console.log(sum)
+		}
+	</script>
+</body>
+</html>
