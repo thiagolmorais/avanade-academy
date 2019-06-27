@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		// tests
+		dropElements([1, 2, 3, 4], function(n) {return n >= 3;}) // deve retornar [3, 4]
+		dropElements([0, 1, 0, 1], function(n) {return n === 1;}) // deve retornar [1, 1]
+		dropElements([1, 2, 3], function(n) {return n > 0;}) // deve retornar [1, 2, 3]
+		dropElements([1, 2, 3, 4], function(n) {return n > 5;}) // deve retornar []
+		dropElements([1, 2, 3, 7, 4], function(n) {return n > 3;}) // deve retornar [7, 4]
+		dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;}) // deve retornar [3, 9]
+
+		function dropElements(arg, func) {
+			var array = [];
+			for (var i = 0; i < arg.length; i++) {
+				if(func(arg[i])) {
+					array.push(arg[i])
+				}
+			}
+			console.log(array);
+		}
+	</script>
+</body>
+
+</html>
