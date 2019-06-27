@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		var Pessoa = function(nome) {
+			this.nome = nome;
+		}
+
+		var Professor = function(nome, materia){
+			Pessoa.call(this, nome);
+			this.materia = materia;
+		}
+
+		Professor.prototype = new Pessoa();
+		Professor.prototype.constructor = Professor;
+
+		Professor.prototype.ensina = function(){
+			console.log(this.nome + "está ensinando" + this.materia);
+		}
+
+		var professor = new Professor("Thiago", "Banco de dados");
+		professor.ensina();
+	</script>
+</body>
+
+</html>
