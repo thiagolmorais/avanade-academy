@@ -15,18 +15,21 @@
 
 		function sumAll(arg) {
 			var sum = 0
-			if (arg[0] <= arg[1]) {
-				var max = arg[1]
-				var min = arg[0]
-			}else{
-				var max = arg[0]
-				var min = arg[1]
+			if (arg[0] > arg[1]) {
+				arg = invertArray(arg)
 			}
-			while(min <= max){
-				sum += min;
-				min++;
+			while(arg[0] <= arg[1]){
+				sum += arg[0];
+				arg[0]++;
 			}
 			console.log(sum)
+		}
+
+		function invertArray(array){
+			var aux = array[0];
+			array[0] = array[1];
+			array[1] = aux;
+			return array
 		}
 	</script>
 </body>
