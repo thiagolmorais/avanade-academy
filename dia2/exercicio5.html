@@ -5,15 +5,17 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div class="container format">
-		<div class="item/">
-			<button id="submitButton">Sortear</button>
-		    <br>
-		    <br>
-		    <br>
-		    <div>
-		    	<img id="userText" class="figure">
-		    </div>
+	<div class="container">
+		<div class="container-box">
+			<div class="item">
+				<button id="submitButton">Sortear</button>
+			    <br>
+			    <br>
+			    <br>
+			    <div>
+			    	<img id="userText" class="figure">
+			    </div>
+			</div>
 		</div>
 	</div>
 
@@ -38,11 +40,11 @@
 		var form = document.getElementById('submitButton');
 		var used = [];
 		form.addEventListener('click', function(event){
-			if (used.length >= 10){
+			var min = 0; 
+		    var max = frutas.length -1;
+			if (used.length >= max){
 				used = []
 			}
-			var min = 0; 
-		    var max = frutas.length;
     		var index = Math.floor(Math.random() * (+max - +min)) + +min; 
 		    while (used.includes(index)) {
 		    	index = Math.floor(Math.random() * (+max - +min)) + +min;

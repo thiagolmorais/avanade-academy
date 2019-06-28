@@ -1,17 +1,27 @@
 .container {
  	display: flex;
 	justify-content: center;
- 	width: 32%;
- 	min-height: 200px;
+ 	margin-top: 2%;
 }
 
 .item {
 }
 
-.format{
-	border: solid;
+p {
+	color: white;
+}
+input {
+	border-radius: 5px;
+}
+
+button {
+	border-radius: 5px;
 }
 
 .figure {
 	width: 200px; 
+}
+
+body {
+  background-color: rgb(71, 136, 135);
 }
