@@ -36,10 +36,19 @@
 		frutas.push(new Fruta('cereja', 'cereja.png'));
 
 		var form = document.getElementById('submitButton');
+		var used = [];
 		form.addEventListener('click', function(event){
+			if (used.length >= 10){
+				used = []
+			}
 			var min = 0; 
-		    var max = frutas.length;  
-    		var index =Math.floor(Math.random() * (+max - +min)) + +min; 
+		    var max = frutas.length;
+    		var index = Math.floor(Math.random() * (+max - +min)) + +min; 
+		    while (used.includes(index)) {
+		    	index = Math.floor(Math.random() * (+max - +min)) + +min;
+		    }
+		    used.push(index);
+		    console.log(used)
 			var image = document.getElementById('userText');
 			var url = "img/"+frutas[index].image
 			image.src = url
