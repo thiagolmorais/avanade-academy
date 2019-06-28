@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container format">
+		<div class="item/">
+			<button id="submitButton">Sortear</button>
+		    <br>
+		    <br>
+		    <br>
+		    <div>
+		    	<img id="userText" class="figure">
+		    </div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var Fruta = function(name, image){
+			this.name = name;
+			this.image = image;
+		}
+
+		var frutas = []
+		frutas.push(new Fruta('abacaxi', 'abacaxi.png'));
+		frutas.push(new Fruta('uva', 'uva.png'));
+		frutas.push(new Fruta('manga', 'manga.png'));
+		frutas.push(new Fruta('abacate', 'abacate.png'));
+		frutas.push(new Fruta('caju', 'caju.png'));
+
+		var form = document.getElementById('submitButton');
+		form.addEventListener('click', function(event){
+			var min = 0; 
+		    var max = frutas.length;  
+    		var index =Math.floor(Math.random() * (+max - +min)) + +min; 
+			var image = document.getElementById('userText');
+			var url = "img/"+frutas[index].image
+			image.src = url
+		});
+	</script>
+</body>
+</html>

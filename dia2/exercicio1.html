@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container format">
+		<div class="item/">
+			<input type="text" id="inputForm" placeholder="Digite algo">
+			<button id="submitButton">OK</button>
+		    <br>
+		    <div id="userText"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var form = document.getElementById('submitButton');
+		form.addEventListener('click', function(event){
+			var text = document.getElementById('inputForm').value;  
+			var div = document.getElementById('userText');
+			var p = document.createElement('p');
+			p.textContent = text;
+			div.appendChild(p)
+		});
+	</script>
+</body>
+</html>

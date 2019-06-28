@@ -1,0 +1,17 @@
+.container {
+ 	display: flex;
+	justify-content: center;
+ 	width: 32%;
+ 	min-height: 200px;
+}
+
+.item {
+}
+
+.format{
+	border: solid;
+}
+
+.figure {
+	width: 200px; 
+}
