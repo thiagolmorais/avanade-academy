@@ -20,7 +20,7 @@
 
 	<script type="text/javascript">
 		var form = document.getElementById('inputForm');
-		form.addEventListener('keyup', function(event){
+		form.addEventListener('keydown', function(event){
 			var p = document.getElementById('userText');
 			p.textContent = document.getElementById('inputForm').value;
 		});

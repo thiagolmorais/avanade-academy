@@ -1,0 +1,34 @@
+input{
+    border-radius: 5px;
+    padding: 2%;
+    margin: 2%;
+    width: inherit;
+}
+
+button{
+    border-radius: 5px;
+    padding: 2%;
+    margin: 2%;
+    width: inherit;
+}
+
+img{
+    width: 40%;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.contador{
+    background-color: darkkhaki;
+}
