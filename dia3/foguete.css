@@ -31,4 +31,19 @@ img{
 
 .contador{
     background-color: darkkhaki;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#tempo{
+    text-align: center;
+}
+
+#cronometro{
+    font-size: 2em;
+    color: white;
+}
+
+.foguete{
+    align-items: flex-end;
 }

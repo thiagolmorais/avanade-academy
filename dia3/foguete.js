@@ -12,4 +12,16 @@ botao.addEventListener('click', function(){
 })
 
 function decolar() {
+    var tamanhoTela = window.innerHeight;
+    var foguete = document.getElementById('foguete');
+    var altura = tamanhoTela;
+    var altitude = setInterval(function() {
+        if (altura > 0) {
+            foguete.style.height = altura+'px';
+            altura--;
+        }else{
+            clearInterval(altitude, alert('Sucesso no lançamento!'));
+        }
+    }, 10);
+    
 }
